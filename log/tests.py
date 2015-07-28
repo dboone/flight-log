@@ -1,3 +1,8 @@
 from django.test import TestCase
+from log.models import Plane
 
-# Create your tests here.
+class TestPlane(TestCase):
+	def test_unicode(self):
+		expected = u'%s' % '321BL'
+		plane = Plane(call_number=expected)
+		self.assertEquals(expected, plane.__unicode__())
