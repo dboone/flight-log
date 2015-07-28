@@ -29,4 +29,4 @@ class Entry(models.Model):
 	notes = models.TextField('Notes')
 	
 	def __unicode__(self):
-		return u'%s' % self.notes
+		return u'%s, %s, %s' % (self.notes, self.plane, self.trip)
