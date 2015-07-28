@@ -1,0 +1,9 @@
+<h1>Entries</h1>
+<ul>
+{% for entry in entries %}
+    <li><a href="entries/{{forloop.counter}}">{{entry.notes}}</a></li>
+	<br />
+{% empty %}
+    <li>No entries yet.</li>
+{% endfor %}
+</ul>
